@@ -5,10 +5,11 @@ import math
 from sklearn.linear_model import LogisticRegression
 import numpy as np
 
-# load data
+# 设置缺失值类型
 na_values=['','NULL','NA','null','na','Na','-9999','-1','Infinity','NaN']
 
-pred_df = pd.read_table('/home/fsg/jiwenchao/ac_class/data/data_set_score.txt',sep = '\t',na_values = na_values)
+# 打开当前目录下的数据文件
+pred_df = pd.read_table('./data_set_score.txt',sep = '\t',na_values = na_values)
 
 # compute xbeta_old
 xbeta_old = []
@@ -42,6 +43,8 @@ a = lr.coef_[0][0]
 b = lr.intercept_[0]
 
 
+# a,b值用于后续修正score评分
+print a,b
 
 
 
