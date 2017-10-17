@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/python
+#-*- coding:utF-8 -*-
 
 import pandas as pd
 import math

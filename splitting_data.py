@@ -1,4 +1,6 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/python
+#-*- coding:utF-8 -*-
+
 import pandas as pd
 import numpy as np
 import xgboost as xgb
