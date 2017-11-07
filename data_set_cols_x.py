@@ -603,14 +603,5 @@ data_set.groupby(['risk_tag_union'])['passid'].count()
 #1、导出文件
 data_set.to_csv(xpath+'/data_set_0705.txt',sep='\t',header=True,index=False)
 
-#注意：替换所有nan值为空值，视情况而定
-data_set.replace(to_replace=np.nan, value='', inplace=True)
 
-
-#nan值变空值
-def output(data_df):
-     data_df.replace(to_replace=np.nan, value='', inplace=True)
-     data_narr = np.array(data_df, str)
-     for i in range(len(data_narr)):
-          print ('\t'.join(data_narr[i]))
 
